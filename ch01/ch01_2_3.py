@@ -1,5 +1,5 @@
 from ch01.ch01_2_2 import sample_space, has_sum_of_21
-from ch01.ch01_1 import get_matching_event
+from ch01.ch01_1_0 import get_matching_event
 from ch01.ch01_1_1 import compute_event_probability
 
 from collections import defaultdict

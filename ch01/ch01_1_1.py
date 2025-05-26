@@ -1,4 +1,4 @@
-from ch01.ch01_1 import get_matching_event, is_heads_or_tails, event_conditions
+from ch01.ch01_1_0 import get_matching_event, is_heads_or_tails, event_conditions
 
 weighted_sample_space = {'앞면':4, '뒷면':1}
 
@@ -9,7 +9,7 @@ event = get_matching_event(is_heads_or_tails, weighted_sample_space.keys())
 event_size = sum(weighted_sample_space[outcome] for outcome in event)
 assert event_size == 5
 
-def compute_event_probability(event_condition, generic_sample_space):
+def compute_event_probability(event_condition: set | dict, generic_sample_space):
     event = get_matching_event(event_condition, generic_sample_space)
     if type(generic_sample_space) == type(set()):
         return len(event) / len(generic_sample_space)
